@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<style type="text/css">
+		body{
+			background: url('http://img.fonwall.ru/o/82/bereg-okean-volnyi-valun.jpg');
+		}
+		div{
+			width: 250px;
+			height: 200px;
+			border: 2px solid black;
+			margin: 0px auto;
+		}
+		input{
+			width: 150px;
+			height: 20px;
+			border-radius: 10px;
+			margin: 0px auto;
+			outline: none;
+			background-color: #D3D3D3;
+			/*display: block;*/
+		}
+		button{
+			width: 150px;
+			height: 25px;
+			margin: 0px auto;
+			background-color: green;
+		}
+		span{
+			color: white;
+		}
+	</style>
+	<div>	
+		<input id="nam" type="text"><span>   Имя</span><br>
+		<input id="ser" type="text"><span>Фамилия</span><br>
+		<input id="age" type="number" min="5" max="99" disabled=""><span>Возраст</span><br>
+		<input id="ran" type="range" min="5" max="99" oninput="age.value=this.value"><br>
+		<input id="mail" type="text" max="20"><span>Имейл</span><br>
+		<input id="pass" type="password" min="5" max="12"><span>Пароль</span><br>
+		<button id="go" >SUBMIT</button>
+	</div>
+			
+	<script type="text/javascript">
+	go.onclick = function(){
+		var user = {
+			name: nam.value,
+			sername: ser.value,
+			age: age.value,
+			mail: mail.value,
+			pass: pass.value
+		};
+		console.log(user);
+	}
+	</script>
+</div>
+</body>
+</html>
